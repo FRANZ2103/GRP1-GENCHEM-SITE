@@ -1,8 +1,15 @@
-const hamMenu = document.querySelector(".ham-menu");
+document.addEventListener('DOMContentLoaded', () => {
+  // Function to toggle mobile navigation menu
+  function toggleMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('active');
+  }
 
-const offScreenMenu = document.querySelector(".off-screen-menu");
-
-hamMenu.addEventListener("click", () => {
-  hamMenu.classList.toggle("active");
-  offScreenMenu.classList.toggle("active");
+  // Attach the function to the hamburger menu
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  if (hamburgerMenu) {
+      hamburgerMenu.addEventListener('click', toggleMenu);
+  } else {
+      console.error('Hamburger menu not found!');
+  }
 });
