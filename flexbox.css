@@ -1,5 +1,6 @@
 
 .flex-container2{
+  min-height: 100vh;
   display: flex;
   flex-direction:column;
   flex-wrap: wrap;
@@ -92,7 +93,7 @@ height: 80%;
 .splitter2 > .child2 {
   font-size: clamp(1rem, 1vw, 3rem); /* Scales between 1rem and 2rem */
   min-width: 30%;
-  margin: 15vh 0;
+  margin: 5vh 0;
   height: 80%;
   background-color: rgba(35,40,54);
   max-width: 70%;
@@ -106,10 +107,50 @@ height: 80%;
 }
 
 @media (max-width: 768px) {
-  .splitter {
-      width: 95%; /* Adjust container width for smaller screens */
-  }
+  
+.flex-container2 > .splitter{
+  min-height: 100vh;
+  height: auto;
+  display: flex; 
+  flex-direction: column; 
+  width: 100%; 
+  align-items: start;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:xx-large;
+  color: #CBF7ED;
+  margin: 35px 0;
+  gap: 100px; /* Adds space between items */
 
+}
+
+.splitter > .child1{
+  background-color: transparent; /* Remove background color */
+align-self: center;
+  font-size: clamp(2rem, 0.1vw, 0.1rem); /* Scales between 1rem and 2rem */
+  padding: 20px;
+  /* margin: 50vh; */
+  min-width: 20%;
+  margin-bottom: 10%;
+  border-color: transparent;
+  
+}
+.splitter > .child2 {
+  font-size: clamp(1rem, 1vw, 3rem); /* Scales between 1rem and 2rem */
+  min-width: 30%;
+  margin: 5vh 0;
+  min-height: 100vh;
+  background-color: rgba(35,40,54);
+  max-width: 70%;
+  padding: 20px;
+  align-self: center;
+  border-radius: 10px;
+  border-color:#ffff;
+  border-width: 5px;
+  border-style: solid;
+
+}
   .splitter h1 {
       font-size: 0.2rem; /* Adjust font size */
   }
